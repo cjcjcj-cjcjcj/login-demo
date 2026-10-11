@@ -8,7 +8,6 @@ import io.jsonwebtoken.Claims;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.security.KeyPair;
@@ -21,12 +20,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class AuthServiceImpl implements AuthService {
     private static final Logger log = LoggerFactory.getLogger(AuthServiceImpl.class);
 
-    // 用户账号：AES 加密后的密码 + 角色
+    // 用户账号：RSA 加密后的密码密文 + 角色
     private record UserAccount(String encryptedPassword, String role) {
     }
-
-    @Value("${app.aes-secret}")
-    private String aesSecret;
 
     private final JwtUtil jwtUtil;
 
@@ -41,9 +37,12 @@ public class AuthServiceImpl implements AuthService {
 
     @PostConstruct
     public void init() throws Exception {
-        userStore.put("admin", new UserAccount(CryptoUtil.aesEncrypt("123456", aesSecret), "ADMIN"));
-        userStore.put("jack", new UserAccount(CryptoUtil.aesEncrypt("abcdef", aesSecret), "USER"));
-        rsaKeyPair = CryptoUtil.generateRseKeyPair();
+        rsaKeyPair = CryptoUtil.generateRsaKeyPair();
+        // 用户初始化：密码 RSA 加密后存储密文（对应流程图：rsa加密 -> 存储 xyz）
+        userStore.put("admin", new UserAccount(
+                CryptoUtil.rsaEncrypt("123456", rsaKeyPair.getPublic()), "ADMIN"));
+        userStore.put("jack", new UserAccount(
+                CryptoUtil.rsaEncrypt("abcdef", rsaKeyPair.getPublic()), "USER"));
         log.info("用户数据初始化完成，共{}个用户", userStore.size());
     }
 
@@ -55,9 +54,12 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public String login(String username, String rsaEncryptedPassword) {
         try {
-            String plain = CryptoUtil.rseDecrypt(rsaEncryptedPassword, rsaKeyPair.getPrivate());
+            // 前端 RSA(PKCS1) 加密传输过来，先解密出明文
+            String plain = CryptoUtil.rsaDecrypt(rsaEncryptedPassword, rsaKeyPair.getPrivate());
+            // 再用 RSA(NoPadding，确定性) 加密成密文，和存储的密文比对 if(xyz==xyz)
+            String cipherText = CryptoUtil.rsaEncrypt(plain, rsaKeyPair.getPublic());
             UserAccount account = userStore.get(username);
-            if (account != null && account.encryptedPassword().equals(CryptoUtil.aesEncrypt(plain, aesSecret))) {
+            if (account != null && account.encryptedPassword().equals(cipherText)) {
                 String token = jwtUtil.generateToken(username, account.role());
                 log.info("用户{}登录成功，签发JWT，角色={}", username, account.role());
                 return token;
