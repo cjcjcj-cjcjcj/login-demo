@@ -1,0 +1,44 @@
+2026-10-11 09:44:32.061 [http-nio-8080-exec-1] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 09:45:09.176 [http-nio-8080-exec-5] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 09:45:11.012 [http-nio-8080-exec-9] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@7c03104f] IP=0:0:0:0:0:0:0:1 耗时=38ms 结果=成功
+2026-10-11 09:45:12.179 [http-nio-8080-exec-2] INFO  operation - POST /api/auth/logout 调用=AuthController.logout 参数=[Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MTY4MzExMCwiZXhwIjoxNzkxNjg0OTEwfQ.z1plxgfTbsZDKyzMpWn9d0Es5VDLLpHokZUTaC4bmWo] IP=0:0:0:0:0:0:0:1 耗时=1ms 结果=成功
+2026-10-11 09:46:35.822 [http-nio-8080-exec-1] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 09:46:36.237 [http-nio-8080-exec-2] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 09:46:37.372 [http-nio-8080-exec-4] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@359c966d] IP=0:0:0:0:0:0:0:1 耗时=48ms 结果=成功
+2026-10-11 09:46:38.129 [http-nio-8080-exec-6] INFO  operation - GET /api/user/profile 调用=AuthController.profile 参数=[UsernamePasswordAuthenticationToken [Principal=admin, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 09:46:38.366 [http-nio-8080-exec-8] INFO  operation - POST /api/auth/logout 调用=AuthController.logout 参数=[Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MTY4MzE5NywiZXhwIjoxNzkxNjg0OTk3fQ.BJIZFmxi8WoDwhCPDmR-xjds8cC-y146WWBlDk6PfOM] IP=0:0:0:0:0:0:0:1 耗时=1ms 结果=成功
+2026-10-11 10:24:43.757 [http-nio-8080-exec-3] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:44.109 [http-nio-8080-exec-4] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@4b953cf7] IP=0:0:0:0:0:0:0:1 耗时=206ms 结果=成功
+2026-10-11 10:24:48.345 [http-nio-8080-exec-6] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:48.386 [http-nio-8080-exec-8] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@47e5b039] IP=0:0:0:0:0:0:0:1 耗时=31ms 结果=成功
+2026-10-11 10:24:49.018 [http-nio-8080-exec-10] INFO  operation - GET /api/user/profile 调用=AuthController.profile 参数=[UsernamePasswordAuthenticationToken [Principal=admin, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] IP=0:0:0:0:0:0:0:1 耗时=1ms 结果=成功
+2026-10-11 10:24:50.672 [http-nio-8080-exec-9] INFO  operation - POST /api/auth/logout 调用=AuthController.logout 参数=[Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MTY4NTQ4OCwiZXhwIjoxNzkxNjg3Mjg4fQ.fAmkU1iaCXH8caSMIdb16bUwrFBI0fA263SgkoRogG4] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:52.040 [http-nio-8080-exec-5] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:52.082 [http-nio-8080-exec-7] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@2a7edb90] IP=0:0:0:0:0:0:0:1 耗时=34ms 结果=成功
+2026-10-11 10:24:52.284 [http-nio-8080-exec-1] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:52.325 [http-nio-8080-exec-2] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@6f2daad3] IP=0:0:0:0:0:0:0:1 耗时=32ms 结果=成功
+2026-10-11 10:24:55.846 [http-nio-8080-exec-3] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:55.886 [http-nio-8080-exec-4] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@70ebabf] IP=0:0:0:0:0:0:0:1 耗时=31ms 结果=成功
+2026-10-11 10:24:57.162 [http-nio-8080-exec-6] INFO  operation - GET /api/user/profile 调用=AuthController.profile 参数=[UsernamePasswordAuthenticationToken [Principal=admin, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:24:58.178 [http-nio-8080-exec-8] INFO  operation - POST /api/auth/logout 调用=AuthController.logout 参数=[Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MTY4NTQ5NSwiZXhwIjoxNzkxNjg3Mjk1fQ.vwkUm4ULq6zMtGqUa4eJBiqjcac_4AudMGjOm5uRwE0] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:25:01.979 [http-nio-8080-exec-5] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:25:02.023 [http-nio-8080-exec-7] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@2ca55fea] IP=0:0:0:0:0:0:0:1 耗时=33ms 结果=成功
+2026-10-11 10:25:02.527 [http-nio-8080-exec-1] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:25:02.567 [http-nio-8080-exec-2] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@f25a4e5] IP=0:0:0:0:0:0:0:1 耗时=32ms 结果=成功
+2026-10-11 10:25:02.775 [http-nio-8080-exec-3] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:25:02.816 [http-nio-8080-exec-4] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@1d9bfdbc] IP=0:0:0:0:0:0:0:1 耗时=33ms 结果=成功
+2026-10-11 10:25:03.065 [http-nio-8080-exec-6] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=1ms 结果=成功
+2026-10-11 10:25:03.105 [http-nio-8080-exec-8] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@2e736a1] IP=0:0:0:0:0:0:0:1 耗时=32ms 结果=成功
+2026-10-11 10:26:51.368 [http-nio-8080-exec-2] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:26:51.493 [http-nio-8080-exec-4] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@53a6b78c] IP=0:0:0:0:0:0:0:1 耗时=46ms 结果=成功
+2026-10-11 10:26:52.890 [http-nio-8080-exec-5] INFO  operation - GET /api/user/profile 调用=AuthController.profile 参数=[UsernamePasswordAuthenticationToken [Principal=admin, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] IP=0:0:0:0:0:0:0:1 耗时=1ms 结果=成功
+2026-10-11 10:26:53.787 [http-nio-8080-exec-6] INFO  operation - POST /api/auth/logout 调用=AuthController.logout 参数=[Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MTY4NTYxMSwiZXhwIjoxNzkxNjg3NDExfQ.Q5HMZboxK1ZSGRWO-jcG4YFH20iBmcql7MdeBP_L2pQ] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:26:54.746 [http-nio-8080-exec-9] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:26:54.758 [http-nio-8080-exec-7] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@3985feab] IP=0:0:0:0:0:0:0:1 耗时=7ms 结果=成功
+2026-10-11 10:38:02.121 [http-nio-8080-exec-1] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:38:02.330 [http-nio-8080-exec-2] INFO  operation - GET /api/auth/publicKey 调用=AuthController.publicKey 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:38:02.932 [http-nio-8080-exec-6] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@5e25edb4] IP=0:0:0:0:0:0:0:1 耗时=54ms 结果=成功
+2026-10-11 10:38:03.291 [http-nio-8080-exec-4] INFO  operation - POST /api/auth/login 调用=AuthController.login 参数=[com.jack.login.dto.LoginRequest@65b347e0] IP=0:0:0:0:0:0:0:1 耗时=8ms 结果=成功
+2026-10-11 10:38:03.892 [http-nio-8080-exec-8] INFO  operation - GET /api/admin/users 调用=AdminController.users 参数=[] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:38:04.004 [http-nio-8080-exec-10] INFO  operation - GET /api/user/profile 调用=AuthController.profile 参数=[UsernamePasswordAuthenticationToken [Principal=admin, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功
+2026-10-11 10:38:04.195 [http-nio-8080-exec-6] INFO  operation - GET /api/user/profile 调用=AuthController.profile 参数=[UsernamePasswordAuthenticationToken [Principal=jack, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] IP=0:0:0:0:0:0:0:1 耗时=0ms 结果=成功

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt@3.3.2/bin/jsencrypt.min.js"></script>
+</head>
+<body>
+    <h2>登录</h2>
+    <div>
+        <p>用户名</p>
+        <input id="username" placeholder="用户名" value="admin">
+    </div>
+    <div>
+        <p>密码</p>
+        <input id="password" type="password" placeholder="密码" value="123456">
+    </div>
+    <button onclick="login()">登录</button>
+    <button onclick="getProfile()">访问受保护接口</button>
+    <button onclick="logout()">退出登录</button>
+    <pre id="out"></pre>
+<script>
+    const out = document.getElementById('out');
+    const show=(obj)=>{
+        out.textContent = typeof obj === 'string'?obj:JSON.stringify(obj,null,2);
+    }
+    async function login(){
+        const pubKey = (await(await fetch('/api/auth/publicKey')).json()).data;
+        const enc = new JSEncrypt();
+        enc.setPublicKey(pubKey);
+        const encrypted = enc.encrypt(document.getElementById('password').value);
+        const res = await(await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body:JSON.stringify({username:username.value,password:encrypted})
+        })).json();
+        if(res.code==200)
+            localStorage.setItem('token',res.data.token);
+        show(res);
+    }
+
+    async function getProfile(){
+        const res = await(await fetch('/api/user/profile',{headers:{'Authorization':'Bearer '+localStorage.getItem('token')}})).json();
+        show(res);
+    }
+
+    async function logout(){
+        const res = await(await fetch('/api/auth/logout',{
+            method: 'POST',
+            headers:{'Authorization':'Bearer '+localStorage.getItem('token')}
+        })).json();
+        if(res.code == 200)
+            localStorage.removeItem('token');
+        show(res);
+    }
+</script>
+</body>
+</html>
